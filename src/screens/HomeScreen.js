@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   StyleSheet,
   Text,
@@ -6,19 +6,23 @@ import {
   Image,
   FlatList,
   ScrollView,
+  Pressable,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import SearchBox from "../components/SearchBox";
 import ProductCard from "../components/ProductCard";
-import { Products } from "../data/Products";
 import Heading from "../components/Heading";
+import { ProductsContext } from "../data/ProductsContext";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
-  const electronicsProducts = Products.filter(
+  const { products } = useContext(ProductsContext);
+  
+  const electronicsProducts = products.filter(
     (product) => product.category === "Electronics"
   );
-  const clothingProducts = Products.filter(
+  const clothingProducts = products.filter(
     (product) => product.category === "Clothing"
   );
   return (
@@ -38,9 +42,10 @@ const HomeScreen = () => {
               <FlatList
                 showsHorizontalScrollIndicator={false}
                 horizontal={true}
-                data={Products}
+                data={products}
                 renderItem={({ item }) => (
                   <ProductCard
+                  
                     title={item.title}
                     image={item.image}
                     brand={item.brand}

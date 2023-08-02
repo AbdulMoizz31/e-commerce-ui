@@ -1,16 +1,17 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import MyNavigation from "./src/navigation/Navigator";
 import { NavigationContainer } from "@react-navigation/native";
+import { ProductProvider } from "./src/data/ProductsContext";
 
 const App = () => {
   return (
     <NavigationContainer>
-      <MyNavigation />
+      <ProductProvider>
+        <MyNavigation />
+      </ProductProvider>
     </NavigationContainer>
   );
 };
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});
 
 export default App;
