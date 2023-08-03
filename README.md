@@ -18,7 +18,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1. Clone the repository to your local machine using the following command:
 
-`git clone https://github.com/your-username/react-native-ecommerce-app.git`
+`git clone https://github.com/AbdulMoizz31/e-commerce-ui.git`
 
 2. Change to the project directory:
 
