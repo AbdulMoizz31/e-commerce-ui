@@ -10,6 +10,10 @@ This is a sample React Native E-commerce app that allows users to browse product
 - Delete items from the cart.  (working...)
 - Modify product quantities in the cart.  (working...)
 
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
 ## Installation
 
 1. Clone the repository to your local machine using the following command:
