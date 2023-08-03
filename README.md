@@ -38,10 +38,10 @@ or
 
 ## Screenshots
 
-![Screenshot_1691057103](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/a324ac08-a1e8-4bee-ad09-40575551c080)
+![Screenshot_1691057103](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/b5e34caf-3ae9-49c4-aa98-1a5592321a90)
 
 
-![Screenshot_1691057076](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/ae91aca7-7c91-46fb-8d1a-d166184c4dfb)
+![Screenshot_1691057076](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/90c89a8d-e0c5-4293-a91d-1effafb0cc62)
 
 
 ## Dependencies
