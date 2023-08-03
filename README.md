@@ -5,10 +5,10 @@ This is a sample React Native E-commerce app that allows users to browse product
 ## Features
 
 - Browse Electronics and Clothing products.
-- Add products to the cart. (working...)
-- View the cart screen with added products. (working...)
-- Delete items from the cart. (working...)
-- Modify product quantities in the cart. (working...)
+- Add products to the cart.  (working...)
+- View the cart screen with added products.  (working...)
+- Delete items from the cart.  (working...)
+- Modify product quantities in the cart.  (working...)
 
 ## Installation
 
@@ -33,13 +33,16 @@ or
 `npm run ios`
 
 
-> I will clean code and refactor it time to time
+>Note: I will clean code and refactor it time to time
+
 
 ## Screenshots
 
-![Screenshot_1691057103_c](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/2510c1e7-1419-4dc8-a22e-15cb41be3aec)
+![Screenshot_1691057103](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/a324ac08-a1e8-4bee-ad09-40575551c080)
 
-![Screenshot_1691057076](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/40fa2e91-1a77-42a1-a83e-d26b0f007d0e)
+
+![Screenshot_1691057076](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/ae91aca7-7c91-46fb-8d1a-d166184c4dfb)
+
 
 ## Dependencies
 
