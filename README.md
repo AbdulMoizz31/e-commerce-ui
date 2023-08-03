@@ -22,7 +22,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 2. Change to the project directory:
 
-`cd cd 'e-commerce-ui'`
+`cd 'e-commerce-ui'`
 
 3. Install dependencies:
 
