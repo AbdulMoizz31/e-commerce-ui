@@ -1,10 +1,8 @@
 import { StyleSheet, Text, View, TextInput } from "react-native";
 import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
 import React from "react";
-import { useState } from "react";
 
 const SearchBox = () => {
-  const [focus, setFocus] = useState(false);
   return (
     <View style={styles.row}>
       <View style={styles.inputContainer}>
@@ -29,6 +27,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     height: 50,
     width: 380,
+    marginBottom: 20
   },
   inputArea: {
     flex: 1,

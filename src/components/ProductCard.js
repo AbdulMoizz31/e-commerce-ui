@@ -1,13 +1,24 @@
-import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ImageBackground,
+  Pressable,
+} from "react-native";
 import React from "react";
 
 import { StarIcon } from "react-native-heroicons/solid";
 
-const ProductCard = ({ image, price, title, brand }) => {
+const ProductCard = ({ image, price, title, brand, onTap }) => {
   return (
+    <Pressable onPress={onTap}>
       <View style={styles.main}>
         <View style={styles.card}>
-        <ImageBackground style={styles.image} borderRadius={15} source={image}>
+          <ImageBackground
+            style={styles.image}
+            borderRadius={15}
+            source={image}
+          >
             <View style={styles.rating}>
               <StarIcon color="#FFD700" size={15} />
               <Text style={{ fontSize: 12 }}>4.5</Text>
@@ -18,10 +29,11 @@ const ProductCard = ({ image, price, title, brand }) => {
               <Text>{brand}</Text>
               <Text style={{ fontSize: 20 }}>{title}</Text>
             </View>
-        </View >
-          <Text style={{ fontSize: 25, marginLeft:5 }} >${price}</Text>
+          </View>
+          <Text style={{ fontSize: 25, marginLeft: 5 }}>${price}</Text>
+        </View>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
@@ -43,8 +55,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 7,
   },
   image: {
-    // marginHorizontal: 6,
-    // marginVertical: 6,
     width: 235,
     height: 240,
     resizeMode: "center",

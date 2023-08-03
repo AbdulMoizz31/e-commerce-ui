@@ -1,5 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
 import {
   HomeIcon,
   MagnifyingGlassIcon,
@@ -10,13 +11,15 @@ import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import CartScreen from "../screens/CartScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import ProductDetailScreen from "../screens/ProductDetailScreen";
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 const ActiveColor = "#000000"; //black
 const inActiveColor = "#C0C0C0";
 
-const MyNavigation = () => {
+const MainTabNavigation = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -27,7 +30,7 @@ const MyNavigation = () => {
         tabBarShowLabel: false,
         tabBarStyle: { height: 60 },
         tabBarIcon: ({ focused, color, size }) => {
-          if (route.name === "HomeScreen") {
+          if (route.name === "AppNavigation") {
             return <HomeIcon color={color} />;
           } else if (route.name === "SearchScreen") {
             return <MagnifyingGlassIcon color={color} />;
@@ -39,7 +42,7 @@ const MyNavigation = () => {
         },
       })}
     >
-      <Tab.Screen name="HomeScreen" component={HomeScreen} />
+      <Tab.Screen name="AppNavigation" component={AppNavigation} />
       <Tab.Screen name="SearchScreen" component={SearchScreen} />
       <Tab.Screen name="CartScreen" component={CartScreen} />
       <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
@@ -47,4 +50,21 @@ const MyNavigation = () => {
   );
 };
 
-export default MyNavigation;
+const AppNavigation = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ProductDetailScreen"
+        component={ProductDetailScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+export default MainTabNavigation;
