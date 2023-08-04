@@ -9,7 +9,7 @@ const CartScreen = () => {
   return (
     <SafeAreaView>
       <View style={styles.main}>
-        <Text style={{ fontSize: 30 }}>My Cart</Text>
+        <Text style={{ fontSize: 30, marginHorizontal: 25, marginTop: 25 }}>My Cart</Text>
         <FlatList
           showsVerticalScrollIndicator={false}
           data={cartProducts}

@@ -5,8 +5,8 @@ This is a sample React Native E-commerce app that allows users to browse product
 ## Features
 
 - Browse Electronics and Clothing products.
-- Add products to the cart.  (working...)
-- View the cart screen with added products.  (working...)
+- Add products to the cart.  
+- View the cart screen with added products.  
 - Delete items from the cart.  (working...)
 
 ## Getting Started
