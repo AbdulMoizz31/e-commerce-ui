@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import {
   View,
   Text,
-  Image,
   StyleSheet,
   ImageBackground,
   Dimensions,
@@ -14,13 +13,18 @@ import { ArrowLeftIcon } from "react-native-heroicons/outline";
 import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ProductsContext } from "../data/ProductsContext";
+import { CartContext } from "../data/CartContext";
 
 const ProductDetailScreen = ({ route }) => {
   const { productId } = route.params;
   const navigation = useNavigation();
   const { products } = useContext(ProductsContext);
+  const { cartProducts, addToCart } = useContext(CartContext);
 
   const selectedProduct = products.find((product) => product.id == productId);
+  const isProductInCart = cartProducts.some(
+    (product) => product.id === selectedProduct.id
+  );
 
   return (
     <SafeAreaView>
@@ -54,6 +58,10 @@ const ProductDetailScreen = ({ route }) => {
             <View style={{ alignItems: "center" }}>
               <Text style={{ fontSize: 30 }}>${selectedProduct.price}</Text>
               <Button
+                disabled={isProductInCart}
+                onPress={() => {
+                  addToCart(selectedProduct);
+                }}
                 color="black"
                 buttonStyle={{
                   borderRadius: 15,
@@ -61,7 +69,7 @@ const ProductDetailScreen = ({ route }) => {
                   paddingVertical: 10,
                 }}
               >
-                Add to Cart
+                {isProductInCart ? "Product in Cart" : "Add to Cart"}
               </Button>
             </View>
           </View>
