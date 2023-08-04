@@ -8,7 +8,6 @@ This is a sample React Native E-commerce app that allows users to browse product
 - Add products to the cart.  (working...)
 - View the cart screen with added products.  (working...)
 - Delete items from the cart.  (working...)
-- Modify product quantities in the cart.  (working...)
 
 ## Getting Started
 
