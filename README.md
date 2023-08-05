@@ -29,11 +29,8 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 5. Run the app on Android or iOS:
 
-   `npm run android`
+   `npm run android` or `npm run ios`
 
-or
-
-    `npm run ios`
 
 
 >Note: I will clean code and refactor it time to time
