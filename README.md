@@ -17,23 +17,23 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 1. Clone the repository to your local machine using the following command:
 
-`git clone https://github.com/AbdulMoizz31/e-commerce-ui.git`
+   `git clone https://github.com/AbdulMoizz31/e-commerce-ui.git`
 
 2. Change to the project directory:
 
-`cd 'e-commerce-ui'`
+   `cd 'e-commerce-ui'`
 
 3. Install dependencies:
 
-`npm install`
+   `npm install`
 
 5. Run the app on Android or iOS:
 
-`npm run android`
+   `npm run android`
 
 or
 
-`npm run ios`
+    `npm run ios`
 
 
 >Note: I will clean code and refactor it time to time
