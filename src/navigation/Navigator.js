@@ -30,9 +30,9 @@ const MainTabNavigation = () => {
         tabBarShowLabel: false,
         tabBarStyle: { height: 60 },
         tabBarIcon: ({ focused, color, size }) => {
-          if (route.name === "AppNavigation") {
+          if (route.name === "HomeToDetails") {
             return <HomeIcon color={color} />;
-          } else if (route.name === "SearchScreen") {
+          } else if (route.name === "SearchToDetails") {
             return <MagnifyingGlassIcon color={color} />;
           } else if (route.name === "CartScreen") {
             return <ShoppingBagIcon color={color} />;
@@ -42,20 +42,36 @@ const MainTabNavigation = () => {
         },
       })}
     >
-      <Tab.Screen name="AppNavigation" component={AppNavigation} />
-      <Tab.Screen name="SearchScreen" component={SearchScreen} />
+      <Tab.Screen name="HomeToDetails" component={HomeToDetails} />
+      <Tab.Screen name="SearchToDetails" component={SearchToDetails} />
       <Tab.Screen name="CartScreen" component={CartScreen} />
       <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
     </Tab.Navigator>
   );
 };
 
-const AppNavigation = () => {
+const HomeToDetails = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ProductDetailScreen"
+        component={ProductDetailScreen}
+        options={{ headerShown: false }}
+      />
+    </Stack.Navigator>
+  );
+};
+const SearchToDetails = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="SearchScreen"
+        component={SearchScreen}
         options={{ headerShown: false }}
       />
       <Stack.Screen
