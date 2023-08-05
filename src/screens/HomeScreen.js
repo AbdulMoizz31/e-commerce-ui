@@ -29,7 +29,7 @@ const HomeScreen = () => {
                 style={styles.image}
                 source={require("../assets/logo.png")}
               />
-              <SearchBox />
+              <SearchBox onpress={() => navigation.navigate("SearchScreen")} />
               {/* New Products */}
               <Heading title="New Products" />
               <FlatList
