@@ -3,23 +3,35 @@ import React, { useContext } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CartProduct from "../components/CartProduct";
 import { CartContext } from "../data/CartContext";
+import { StatusBar } from "expo-status-bar";
+import { Button } from "@rneui/themed";
 
 const CartScreen = () => {
-  const { cartProducts } = useContext(CartContext);
+  const { cartProducts, removeFromCart } = useContext(CartContext);
   return (
     <SafeAreaView>
+      <StatusBar style="auto" />
       <View style={styles.main}>
-        <Text style={{ fontSize: 30, marginHorizontal: 25, marginTop: 25 }}>My Cart</Text>
+        <Text style={{ fontSize: 30, marginHorizontal: 25, marginTop: 25 }}>
+          My Cart
+        </Text>
         <FlatList
           showsVerticalScrollIndicator={false}
           data={cartProducts}
           renderItem={({ item }) => (
-            <CartProduct
-              title={item.title}
-              image={item.image}
-              brand={item.brand}
-              price={item.price}
-            />
+            <View>
+              <CartProduct
+                title={item.title}
+                image={item.image}
+                brand={item.brand}
+                price={item.price}
+              />
+              <Button
+                onPress={() => removeFromCart(item.id)}
+                title="Remove"
+                color="red"
+              />
+            </View>
           )}
         />
       </View>

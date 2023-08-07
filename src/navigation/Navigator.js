@@ -10,7 +10,6 @@ import {
 import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import CartScreen from "../screens/CartScreen";
-import ProfileScreen from "../screens/ProfileScreen";
 import ProductDetailScreen from "../screens/ProductDetailScreen";
 
 const Tab = createBottomTabNavigator();
@@ -36,16 +35,14 @@ const MainTabNavigation = () => {
             return <MagnifyingGlassIcon color={color} />;
           } else if (route.name === "CartScreen") {
             return <ShoppingBagIcon color={color} />;
-          } else if (route.name === "ProfileScreen") {
-            return <UserCircleIcon color={color} />;
-          }
+          } 
         },
       })}
     >
       <Tab.Screen name="HomeToDetails" component={HomeToDetails} />
       <Tab.Screen name="SearchToDetails" component={SearchToDetails} />
       <Tab.Screen name="CartScreen" component={CartScreen} />
-      <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
+      
     </Tab.Navigator>
   );
 };
