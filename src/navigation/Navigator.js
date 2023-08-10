@@ -5,7 +5,6 @@ import {
   HomeIcon,
   MagnifyingGlassIcon,
   ShoppingBagIcon,
-  UserCircleIcon,
 } from "react-native-heroicons/outline";
 import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
@@ -35,14 +34,13 @@ const MainTabNavigation = () => {
             return <MagnifyingGlassIcon color={color} />;
           } else if (route.name === "CartScreen") {
             return <ShoppingBagIcon color={color} />;
-          } 
+          }
         },
       })}
     >
       <Tab.Screen name="HomeToDetails" component={HomeToDetails} />
       <Tab.Screen name="SearchToDetails" component={SearchToDetails} />
       <Tab.Screen name="CartScreen" component={CartScreen} />
-      
     </Tab.Navigator>
   );
 };
