@@ -38,10 +38,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ## Screenshots
 
-![Screenshot_1691057103](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/b5e34caf-3ae9-49c4-aa98-1a5592321a90)
-
-
-![Screenshot_1691057076](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/90c89a8d-e0c5-4293-a91d-1effafb0cc62)
+![Mockup](https://github.com/AbdulMoizz31/e-commerce-ui/assets/88984953/a81332c9-8e6b-4531-8fca-8d173cc1ffa6)
 
 
 ## Dependencies
